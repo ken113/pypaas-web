@@ -1,0 +1,132 @@
+
+$current: #48CFAD;
+
+.ads {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 70%;
+    background: red;
+}
+
+.viewport {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.ad {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    visibility: hidden;
+    opacity: 0;
+    transition: 1s;
+
+    &.active {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        display: block;
+        height: 100%;
+        width: 100%;
+        background: rgba(0,0,0,.1);
+    }
+}
+
+.icon {
+    position: absolute;
+    top: 21%;
+    left: 20%;
+    z-index: 1;
+
+    img {
+        max-width: 70%;
+        min-width: 115px;
+    }
+}
+
+.info {
+    color: #fff;
+    position: absolute;
+    left: 20%;
+    top: 51%;
+    font-family: HelveticaNeue-UltraLight,'Helvetica Neue UltraLight',Roboto,Arial,Sans-serif;
+    font-weight: 300;
+    z-index: 1;
+
+    h2 {
+        font-size: 2.4em;
+        letter-spacing: 1px;
+        word-spacing: 3px;
+        font-weight: 100;
+    }
+
+    p {
+        position: relative;
+        display: -webkit-box;
+        width: 75%;
+        height: 80px;
+        font-size: 1.5em;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: block;
+            height: 20px;
+            width: 100%;
+        }
+    }
+}
+
+.controllers {
+    position: absolute;
+    right: 12%;
+    top: 50%;
+    color: #000;
+    text-align: center;
+    transform: translateY(-50%);
+    z-index: 99;
+
+    i {
+        font-size: 4em;
+        cursor: pointer;
+        transition: .2s;
+
+        &:hover {
+            color: rgba(0,0,0,.7);
+        }
+    }
+
+    .current,
+    .total {
+        margin: .2em;
+        font-family: 'Lato';
+        font-size: 3em;
+        color: #fff;
+    }
+
+    .current {
+        font-size: 2em;
+        color: $current;
+    }
+}
+

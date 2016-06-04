@@ -1,0 +1,161 @@
+
+.container {
+    position: relative;
+    height: 100%;
+}
+
+.hero {
+    position: relative;
+    height: 40vh;
+    background-image: linear-gradient(#202d5f,#614381);
+
+    canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+.title {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    color: #fff;
+    font-size: 1.7em;
+    color: #fff;
+    white-space: nowrap;
+    z-index: 9;
+    transform: translate(-50%, -50%);
+}
+
+.button {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    padding: .5em 2em !important;
+    height: auto !important;
+    font-size: 1.7em !important;
+    z-index: 9;
+    transform: translate(-50%, -50%);
+}
+
+.categories {
+    position: relative;
+    height: 100vh;
+}
+
+.category {
+    display: inline-block;
+    height: 50vh;
+    width: 50vw;
+    background: red;
+}
+
+.partner {
+    width: 100%;
+    height: 867px;
+}
+
+.categoryTitle {
+    position: absolute;
+    font-size: 2em;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+
+    p {
+        padding: .2em 1em;
+    }
+}
+
+.categoryBg {
+    transition: .2s;
+    &:hover {
+        fill-opacity: .7;
+    }
+}
+
+:global {
+
+    .particles-js-canvas-el {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .categories-government-title {
+        left: 50%;
+        top: 20%;
+
+        p {
+            background-color: black;
+            color: #fff;
+        }
+    }
+
+    .categories-enterprise-title {
+        left: 20%;
+        top: 50%;
+
+        p {
+            background-color: blue;
+        }
+    }
+
+    .categories-education-title {
+        left: 50%;
+        top: 80%;
+
+        p {
+            background-color: yellow;
+            color: #000;
+        }
+    }
+
+    .categories-health-title {
+        left: 80%;
+        top: 50%;
+
+        p {
+            background-color: green;
+            color: #000;
+        }
+    }
+
+    .categories-enterprise {
+
+    }
+
+    .categories-education {
+
+    }
+
+    .categories-government {
+
+    }
+
+    .categories-health {
+
+    }
+
+    [class^=categories-items] {
+        position: absolute;
+
+        ul {
+            padding: 0;
+        }
+
+        img {
+            width: 48px;
+            height: 48px;
+            padding: 0;
+            border-radius: 100%;
+            margin: .4em 0 .6em;
+            border: thin solid #ccc;
+        }
+    }
+}
+

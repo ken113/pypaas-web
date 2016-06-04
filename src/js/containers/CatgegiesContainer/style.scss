@@ -1,0 +1,140 @@
+
+$border-color: #48CFAD;
+
+.categories {
+    position: relative;
+    height: 60vh;
+    overflow: hidden;
+
+    a,
+    a:hover,
+    a:visited,
+    a:active {
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+.categoryTypeWrapper {
+    position: absolute;
+    left: -5%;
+    top: 0;
+    height: 100%;
+    width: 40%;
+    transform: skew(-15deg);
+    overflow: hidden;
+    z-index: 100;
+}
+
+.categoryType {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 120%;
+    height: 100%;
+    color: #fff;
+    background: #ee1;
+    transform: skew(15deg);
+
+    ul {
+        position: absolute;
+        padding: 2em;
+        top: 50%;
+        right: 25%;
+        text-align: center;
+        text-transform: uppercase;
+        list-style: none;
+        transform: translateY(-50%) skew(-15deg);
+    }
+
+    li {
+        margin-bottom: 3em;
+        padding: 0 1em;
+        transform: skew(15deg);
+        border-bottom: 2px solid transparent;
+        cursor: pointer;
+        transition: .2s;
+    }
+
+    h3 {
+        margin: 0;
+        font-size: 2em;
+        font-weight: 100;
+    }
+
+    p {
+        padding: .2em 1em;
+    }
+
+    .enterprise {
+        p {
+            background: blue;
+        }
+
+        &.active,
+        &:hover {
+            border-color: blue;
+        }
+    }
+
+    .government {
+        p {
+            background: black;
+            color: #fff;
+        }
+
+        &.active,
+        &:hover {
+            border-color: black;
+        }
+    }
+
+    .education {
+        p {
+            background: yellow;
+            color: #000;
+        }
+
+        &.active,
+        &:hover {
+            border-color: yellow;
+        }
+    }
+
+    .health {
+        p {
+            background: green;
+            color: #000;
+        }
+
+        &.active,
+        &:hover {
+            border-color: green;
+        }
+    }
+}
+
+.list {
+    margin: 60px 0 100px;
+}
+
+.sortbar {
+    list-style: none;
+    color: #000;
+    font-size: 2em;
+    text-align: center;
+
+    li {
+        display: inline-block;
+        padding: .5em 2em .2em;
+        margin: 0 2em;
+        border-bottom: 4px solid transparent;
+        cursor: pointer;
+        transition: .2s;
+
+        &.active,
+        &:hover {
+            border-color: $border-color;
+        }
+    }
+}

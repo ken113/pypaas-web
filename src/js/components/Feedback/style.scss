@@ -1,0 +1,156 @@
+
+.feedback {
+    position: relative;
+    height: 700px;
+    background-image: url('../../../assets/images/hears_background.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: HelveticaNeue-UltraLight,'Helvetica Neue UltraLight',Roboto,Arial,Sans-serif;
+    color: #fff;
+    overflow: hidden;
+
+    &:before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        top: 0;
+        display: block;
+        width: 40%;
+        left: 50%;
+        background-image: url('../../../assets/images/hearts.png');
+        background-repeat: no-repeat;
+        background-position-x: center;
+        transform: translateX(-50%);
+    }
+
+    h2 {
+        padding: 2em 0;
+        font-size: 5em;
+        text-align: center;
+    }
+}
+
+.list {
+    position: relative;
+    margin-top: -5em;
+    list-style: none;
+    text-align: center;
+
+    li {
+        display: inline-block;
+    }
+
+    h3 {
+        font-size: 3em;
+    }
+}
+
+.content {
+    width: 300px;
+    height: 200px;
+    margin: 0 3em;
+    font-size: 2em;
+}
+
+.name {
+
+    img {
+        display: inline-block;;
+        width: 64px;
+        height: 64px;
+        border-radius: 100%;
+    }
+}
+
+.heart {
+    position: relative;
+
+    &.x1 {
+        left: 5%;
+        transform: scale(0.9);
+        opacity: 0.6;
+        animation: moveclouds 15s linear infinite, sideWays 4s ease-in-out infinite alternate;
+    }
+
+    &.x2 {
+        left: 25%;
+        transform: scale(0.6);
+        opacity: 0.9;
+        animation: moveclouds 25s linear infinite, sideWays 5s ease-in-out infinite alternate;
+    }
+
+    &.x3 {
+        left: 55%;
+        transform: scale(0.8);
+        opacity: 0.8;
+        animation: moveclouds 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+    }
+
+    &.x4 {
+        left: 72%;
+        transform: scale(0.75);
+        opacity: 0.9;
+        animation: moveclouds 18s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    }
+
+    &.x5 {
+        left: 88%;
+        transform: scale(0.8);
+        opacity: 0.3;
+        animation: moveclouds 7s linear infinite, sideWays 1s ease-in-out infinite alternate;
+    }
+
+    &:before,
+    &:after {
+        position: absolute;
+        content: '';
+        left: 18px;
+        top: 0;
+        width: 18px;
+        height: 30px;
+        background: #CC2022;
+        border-radius: 30px 30px 0 0;
+        transform: rotate(-45deg);
+        transform-origin: 0 100%;
+    }
+
+    &:after {
+        left: 0;
+        transform: rotate(45deg);
+        transform-origin: 100% 100%;
+    }
+}
+
+.alternate {
+    background: url('../../../assets/images/heart.png') no-repeat center;
+    width: 24px;
+    height: 21px;
+    position: relative;
+    display: block;
+}
+
+.altheart.x6 {
+    left: 33%;
+    opacity: 1;
+    animation: moveclouds 10s linear infinite, swayWays 9s ease-in-out infinite alternate;
+}
+
+@keyframes moveclouds {
+    0% {
+        top: -10px;
+    }
+    100% {
+        top: -500px;
+    }
+}
+
+@keyframes sideWays {
+    0% {
+        margin-left: 0px;
+    }
+    100% {
+        margin-left: 50px;
+    }
+}
+
+

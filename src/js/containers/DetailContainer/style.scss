@@ -1,0 +1,126 @@
+
+.hero {
+    position: relative;
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: HelveticaNeue-UltraLight,'Helvetica Neue UltraLight',Roboto,Arial,Sans-serif;
+    color: #fff;
+    overflow: hidden;
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,.3);
+    }
+}
+
+.rate,
+.info {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    transform: translateY(-50%);
+}
+
+.rate {
+    top: 55%;
+    right: 25em;
+
+    h1 {
+        display: inline-block;
+        margin: 0;
+        font-size: 4em;
+    }
+
+    :global {
+        .md-rate {
+            transform: translateY(-.5em);
+        }
+    }
+}
+
+.showcase {
+    position: relative;
+    min-height: 400px;
+    text-align: center;
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: visible;
+
+    img {
+        max-height: 400px;
+        transition: .2s;
+
+        &:hover {
+            opacity: 1 !important;
+        }
+    }
+
+    &:hover img {
+        opacity: .7;
+    }
+}
+
+.info {
+    left: 15em;
+    img {
+        display: inline-block;
+        min-width: 14em;
+        max-width: 18em;
+    }
+
+    h2 {
+        font-size: 4em;
+    }
+
+    :global {
+        .md-btn.md-btn-primary {
+            position: absolute;
+            bottom: -5em;
+            left: 0;
+        }
+    }
+}
+
+.descWrapper {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 8em;
+    width: 45%;
+}
+
+.desc {
+    height: 5em;
+}
+
+.percent {
+    list-style: none;
+    padding: 0;
+    font-size: 1.3em;
+
+    span {
+        display: inline-block;
+        height: 1.4em;
+        margin: 0 1em;
+        background: linear-gradient(to right, #ffce54, #f6bb42);
+        border-top-right-radius: 1px;
+        border-bottom-right-radius: 1px;
+        transform: translateY(.3em);
+    }
+}
+
+.recommend {
+    margin: 60px 0 100px;
+
+    h2 {
+        font-size: 4em;
+        text-align: center;
+    }
+}

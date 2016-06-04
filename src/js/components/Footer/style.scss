@@ -1,0 +1,68 @@
+
+.footer {
+    position: relative;
+    padding: 4em 10em;
+    background-image: url('../../../assets/images/bg-footer.png');
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    strong {
+        font-weight: 100;
+        font-size: 1.4em;
+    }
+}
+
+.columns {
+    width: 70%;
+    margin: 0 auto 4em;
+    padding-bottom: 3em;
+    border-bottom: 1px solid #ccc;
+
+    li {
+        display: inline-block;
+        width: 25%;
+        vertical-align: top;
+    }
+
+    a,
+    a:visited,
+    a:active,
+    a:hover {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    a {
+        display: inline-block;
+        padding: 0 0 .2em;
+        border: 1px solid transparent;
+        transition: .2s;
+
+        &:hover {
+            border-bottom: 1px solid #ccc;
+        }
+    }
+
+    p {
+        white-space: nowrap;
+    }
+}
+
+.social {
+    position: relative;
+    margin: 2em 0 1em;
+
+    button {
+        margin: 1em;
+        background: #000;
+        color: #fff;
+    }
+}
+
+.copyright {
+    color: #aaa;
+}

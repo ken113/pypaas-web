@@ -1,0 +1,55 @@
+
+.header {
+    position: absolute;
+    left: 0;
+    top: 3em;
+    width: 100%;
+    padding: 1em 10em;
+    z-index: 9;
+}
+
+.search {
+    font-size: 1.5em;
+}
+
+:global {
+
+    .logo {
+        position: absolute;
+        top: 50%;
+        left: 10em;
+        width: 8em;
+        height: 8em;
+        background-image: url(../../../assets/images/logo_blue.png);
+        background-position: center;
+        background-size: cover;
+        transform: translateY(-50%);
+    }
+
+    .menu-item {
+        position: relative;
+        display: inline-block;
+        padding: .5em 1em;
+        margin-left: 2em;
+        float: right;
+        border: 1px solid transparent;
+        font-size: 1.3em;
+        color: #fff;
+        text-decoration: none;
+        transition: .2s;
+
+        &:visited,
+        &:active,
+        &:unvisited,
+        &:hover {
+            color: #fff;
+        }
+
+        &.menu-item-active,
+        &:hover {
+            border-top: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+        }
+    }
+
+}
