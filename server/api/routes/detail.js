@@ -47,10 +47,41 @@ function getList() {
     });
 }
 
+function getDetail() {
+
+    var data = JSON.stringify({
+        cover: '/images/twitter-header-photo-25.jpg',
+        name: 'Undrtone',
+        desc: 'Hooking into Spotify, SoundCloud, Rdio and Beats, Undrtone uses the world’s biggest cloud-based services to create a community around music. Undrtone’s a never-ending stream of songs curated for and by you – enabling you to discover and share tunes with your friends, as well as follow tastemakers and artists you love. ',
+        icon: '/images/undrtone.svg',
+        score: 8.7,
+        star5: 16.0,
+        star4: 39.2,
+        star3: 37.0,
+        star2: 6.3,
+        star1: 1.5,
+
+        showcase: [
+            '/images/showcase1.png',
+            '/images/showcase2.png',
+            '/images/showcase3.png',
+            '/images/showcase4.png',
+        ]
+    });
+
+    return new Promise((resolve, reject) => {
+
+        setTimeout(() => {
+            resolve(data);
+        }, Math.random() * 3000 + 100);
+    });
+}
+
 debug('Start listenning');
 
 export default (api) => {
 
 api
-    .get('/detail/list/:type?', async ctx => ctx.body = await getList(ctx.params.type, ctx.params.sortby));
+    .get('/detail/list/:type?', async ctx => ctx.body = await getList(ctx.params.type, ctx.params.sortby))
+    .get('/detail/:id?', async ctx => ctx.body = await getDetail(ctx.params.id));
 };
