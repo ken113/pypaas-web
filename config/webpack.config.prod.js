@@ -1,14 +1,14 @@
 
 import webpack from 'webpack';
+import config from './index';
 import path from 'path';
 import baseConfig from './webpack.config.base';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 
 export default {
 
     ...baseConfig,
-
-    devtool: 'source-map',
 
     entry: {
 
@@ -23,14 +23,24 @@ export default {
     },
 
     output: {
-
         ...baseConfig.output,
-        publicPath: path.resolve(__dirname, '../dist/'),
+        publicPath: '/'
     },
 
     plugins: [
         ...baseConfig.plugins,
 
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify('production')
+        }),
+
+        new CopyWebpackPlugin([
+            {
+                from: 'images/**/*',
+                to: config.dist,
+                context: path.join(config.client, 'assets')
+            }
+        ]),
         new webpack.optimize.CommonsChunkPlugin({
             names: ['vendor']
         }),
