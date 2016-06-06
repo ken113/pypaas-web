@@ -2,7 +2,7 @@
 .feedback {
     position: relative;
     height: 700px;
-    background-image: url('../../../assets/images/hears_background.jpg');
+    background-image: url('images/hears_background.jpg');
     background-size: cover;
     background-position: center;
     font-family: HelveticaNeue-UltraLight,'Helvetica Neue UltraLight',Roboto,Arial,Sans-serif;
@@ -17,7 +17,7 @@
         display: block;
         width: 40%;
         left: 50%;
-        background-image: url('../../../assets/images/hearts.png');
+        background-image: url('images/hearts.png');
         background-repeat: no-repeat;
         background-position-x: center;
         transform: translateX(-50%);
@@ -122,7 +122,7 @@
 }
 
 .alternate {
-    background: url('../../../assets/images/heart.png') no-repeat center;
+    background: url('images/heart.png') no-repeat center;
     width: 24px;
     height: 21px;
     position: relative;

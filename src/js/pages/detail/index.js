@@ -16,7 +16,7 @@ export default class DetailContainer extends Component {
     render() {
 
         return (
-            <div>
+            <div className={ this.props.app.loading && this.props.apps.loading && 'md-loading md-loading-show' }>
                 <Helmet title="应用详情 - PengYun Paas"></Helmet>
 
                 <Hero app={this.props.app.data} loading={this.props.app.loading} id={this.props.params.id} getDetail={this.props.getDetail}></Hero>

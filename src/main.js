@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import { Router, browserHistory } from 'react-router';
 import createStore from 'redux/createStore';
 import getRoutes from 'routes';
-import './assets/fonts/icomoon/style.css';
+import 'fonts/icomoon/style.css';
 import './sass/global.scss';
 
 const store = createStore();

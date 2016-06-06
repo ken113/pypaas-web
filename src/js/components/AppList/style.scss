@@ -55,14 +55,15 @@
     :global {
         .md-btn-icon {
             position: absolute;
-            bottom: -5%;
             left: 50%;
+            bottom: 0;
             margin-left: -28px;
             background: #000;
             font-size: 2em;
             opacity: 0;
             visibility: hidden;
             z-index: 1;
+            transform: translateY(50%);
         }
     }
 }

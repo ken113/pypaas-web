@@ -1,6 +1,7 @@
 
 import React, { PropTypes, Component } from 'react';
-import { Ads, AppList, Feedback } from 'components';
+import { AppList } from 'components';
+import { Feedback, Ads } from './components';
 import { connect } from 'react-redux';
 import * as categoriesActions from 'redux/modules/categories';
 import Helmet from 'react-helmet';
@@ -88,7 +89,7 @@ export default class CatgegiesContainer extends Component {
                         </div>
                     </div>
 
-                    <Ads showNext={showNext} showPrev={showPrev} getAds={getAds} ads={{...this.props.ads, type}}></Ads>
+                    <Ads showPrev={showPrev} showNext={showNext} getAds={getAds} ads={{ ...this.props.ads, type }}></Ads>
                 </div>
 
                 <div className={classes.list}>
@@ -108,6 +109,7 @@ export default class CatgegiesContainer extends Component {
 
                     <AppList getApps={getApps} type={type} apps={this.props.apps}></AppList>
                 </div>
+
                 <Feedback></Feedback>
             </div>
         );

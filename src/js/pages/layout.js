@@ -2,7 +2,7 @@
 import React, { Component, PropTypes } from 'react';
 import { Header, Footer } from 'components';
 
-export default class AppContainer extends Component {
+export default class Layout extends Component {
 
     static props = {
         children: PropTypes.element.isRequired

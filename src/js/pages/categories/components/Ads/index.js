@@ -49,7 +49,7 @@ export default class Ads extends Component {
 
     componentDidMount() {
 
-        this.props.getAds(this.props.type).then(() => {
+        this.props.getAds(this.props.ads.type).then(() => {
             this.refs.ads.classList.remove('md-loading-show');
             this.loopAd();
         });

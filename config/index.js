@@ -24,6 +24,12 @@ const config = {
         '__DEV': env === 'development',
         '__PROD__': env === 'production',
         '__DEBUG__': env === 'development'
+    },
+
+    enableProxy: false,
+    proxy: {
+        target: 'http://www.pengyun.gov.cn/PengyunPlusNew/center_ajax',
+        pattern: '^\/api\/\.*$'
     }
 };
 

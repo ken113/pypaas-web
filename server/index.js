@@ -6,8 +6,8 @@ import path from 'path';
 import webpack from 'webpack';
 import webpackConfig from '../config/webpack.config.dev';
 import api from './api';
+import proxy from './middleware/proxy';
 import serve from 'koa-static';
-import proxy from 'koa-proxy';
 import historyApiFallback from 'koa-connect-history-api-fallback';
 import webpackDevMiddleware from './middleware/webpack-dev';
 import webpackHMRMiddleware from './middleware/webpack-hmr';
@@ -39,7 +39,9 @@ if (config.env === 'development') {
     app.use(webpackHMRMiddleware(compiler));
     app.use(convert(serve(config.assets)));
 
-    if (!config.proxy) {
+    if (config.enableProxy && config.proxy) {
+        app.use(proxy(config.proxy));
+    } else {
         app.use(api());
     }
 

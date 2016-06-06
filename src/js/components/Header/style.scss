@@ -5,7 +5,7 @@
     top: 3em;
     width: 100%;
     padding: 1em 10em;
-    z-index: 9;
+    z-index: 1000;
 }
 
 .search {
@@ -20,7 +20,7 @@
         left: 10em;
         width: 8em;
         height: 8em;
-        background-image: url(../../../assets/images/logo_blue.png);
+        background-image: url('../../../assets/images/logo_blue.png');
         background-position: center;
         background-size: cover;
         transform: translateY(-50%);

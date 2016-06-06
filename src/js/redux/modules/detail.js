@@ -1,5 +1,4 @@
 
-
 import axios from 'axios';
 
 const GETAPPS = 'pypaas/detail/GETAPPS';
@@ -68,13 +67,13 @@ export default function reducer(state = initialState, action = {}) {
     }
 };
 
-export function getApps(type) {
+export function getApps() {
 
     return {
         type: GETAPPS,
         payload: {
             request: {
-                url: `/detail/list/${type}`
+                url: `/detail/list`
             }
         }
     };

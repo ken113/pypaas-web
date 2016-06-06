@@ -14,7 +14,7 @@ export default class AppList extends Component {
     };
 
     componentDidMount() {
-        this.props.getApps(this.props.type);
+        this.props.getApps(this.props.type || '');
     }
 
     render() {

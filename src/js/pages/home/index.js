@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { findDOMNode } from 'react-dom';
 import Helmet from 'react-helmet';
-import { Banner, Partner } from 'components';
+import { Banner, Partner } from './components';
 import classes from './style.scss';
 import SVG from 'svgjs';
 import 'particles.js/particles.js';

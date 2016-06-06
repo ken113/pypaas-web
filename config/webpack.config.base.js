@@ -102,6 +102,11 @@ export default {
             path.resolve(__dirname, '../src/js'),
             path.resolve(__dirname, '../src/assets/fonts/icomoon')
         ],
+
+        alias: {
+            images: path.join(__dirname, '../src/assets/images/'),
+            fonts: path.join(__dirname, '../src/assets/fonts/')
+        },
         extensions: ['', '.js', '.jsx']
     },
 
