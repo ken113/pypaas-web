@@ -5,7 +5,7 @@
     top: 3em;
     width: 100%;
     padding: 1em 10em;
-    z-index: 1000;
+    z-index: 999;
 }
 
 .search {
@@ -20,7 +20,7 @@
         left: 10em;
         width: 8em;
         height: 8em;
-        background-image: url('../../../assets/images/logo_blue.png');
+        background-image: url(../../../assets/images/logo_blue.png);
         background-position: center;
         background-size: cover;
         transform: translateY(-50%);
@@ -52,4 +52,88 @@
         }
     }
 
+    .search {
+        position: relative;
+
+        ul {
+            padding: 0 1.4em;
+            list-style: none;
+            color: #000;
+            font-weight: 300;
+        }
+
+        li {
+            line-height: 3em;
+            font-size: .8em;
+            color: #ccc;
+            border-bottom: thin solid #ccc;
+            cursor: pointer;
+            transition: .2s;
+
+            &:hover {
+                padding-left: .5em;
+                color: #48CFAD;
+            }
+        }
+
+        h3 {
+            padding: 0 1.4em;
+            font-size: .9em;
+            background: #efefef;
+            color: #000;
+            line-height: 3em;
+        }
+
+        &:hover .search-box {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+    }
+
+    .search-box {
+        position: absolute;
+        top: 140%;
+        right: 0;
+        padding: 1em 0;
+        background: #fff;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition: .2s;
+
+        &:after {
+            content: '';
+            position: absolute;
+            display: block;
+            right: 1.2em;
+            top: -10px;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid #fff;
+        }
+    }
+
+    .search-input {
+        position: relative;
+        padding: 0 1em;
+        input {
+            width: 20em;
+            text-indent: 2.2em;
+            border: 0;
+            outline: 0;
+            line-height: 2em;
+        }
+
+        i {
+            position: absolute;
+            top: 50%;
+            left: .5em;
+            font-size: 2em;
+            color: #000;
+            transform: translateY(-50%);
+        }
+    }
 }

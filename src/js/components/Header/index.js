@@ -12,9 +12,25 @@ export default class Header extends Component {
 
                 <div className="logo"></div>
 
-                <a className="menu-item" href="">
+                <div className="menu-item search">
                     <i className={classes.search + ' icon-search'}></i>
-                </a>
+
+                    <div className="search-box">
+                        <div className="search-input">
+                            <i className="icon-search"></i>
+                            <input type="text" placeholder="How can we help you?" />
+                        </div>
+
+                        <h3>
+                            Suggested Articles
+                        </h3>
+
+                        <ul>
+                        	<li>Getting Started Guide</li>
+                        	<li>How to create a app</li>
+                        </ul>
+                    </div>
+                </div>
 
                 <a href="http://help.pengyun.gov.cn" className="menu-item">
                     开发者社区

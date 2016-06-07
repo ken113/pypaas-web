@@ -53,7 +53,11 @@ export default class Hero extends Component {
                             <p className={classes.desc}>{app.desc}</p>
                         </div>
 
-                        <button className="md-btn md-btn-primary">部署应用</button>
+                        {
+                            app.installed
+                                ? <button className="md-btn md-btn-primary">查看详情</button>
+                                : <button className="md-btn md-btn-primary">部署应用</button>
+                        }
                     </div>
 
                     <div className={classes.rate}>
