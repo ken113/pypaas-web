@@ -20,7 +20,7 @@ export default {
     entry: {
 
         main: [
-            path.resolve(__dirname, '../src/main.js'),
+            path.join(config.client, 'main.js'),
             'webpack-hot-middleware/client?path=/__webpack_hmr'
         ],
 

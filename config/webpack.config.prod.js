@@ -12,7 +12,7 @@ export default {
 
     entry: {
 
-        main: path.resolve(__dirname, '../src/main.js'),
+        main: path.join(config.client, 'main.js'),
 
         vendor: [
             'react',

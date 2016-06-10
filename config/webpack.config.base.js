@@ -69,7 +69,7 @@ export default {
     },
 
     sassLoader: {
-        includePaths: path.resolve(__dirname, '../src/sass')
+        includePaths: path.join(config.client, 'sass')
     },
 
     postcss: [
@@ -93,19 +93,18 @@ export default {
     ],
 
     output: {
-        path: path.join(__dirname, '../dist'),
+        path: config.dist,
         filename: '[name].[hash].js'
     },
 
     resolve: {
         root: [
-            path.resolve(__dirname, '../src/js'),
-            path.resolve(__dirname, '../src/assets/fonts/icomoon')
+            path.join(config.client, 'js')
         ],
 
         alias: {
-            images: path.join(__dirname, '../src/assets/images/'),
-            fonts: path.join(__dirname, '../src/assets/fonts/')
+            images: path.join(config.client, 'assets/images/'),
+            fonts: path.join(config.client, 'assets/fonts/')
         },
         extensions: ['', '.js', '.jsx']
     },
