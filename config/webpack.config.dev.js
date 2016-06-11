@@ -20,8 +20,9 @@ export default {
     entry: {
 
         main: [
+            'babel-polyfill',
             path.join(config.client, 'main.js'),
-            'webpack-hot-middleware/client?path=/__webpack_hmr'
+            'webpack-hot-middleware/client?path=/__webpack_hmr', 
         ],
 
         vendor: [
